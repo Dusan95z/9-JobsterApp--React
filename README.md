@@ -2,4 +2,4 @@
 
 React JS project.
 
-link
+https://9-jobsterapp.netlify.app/
