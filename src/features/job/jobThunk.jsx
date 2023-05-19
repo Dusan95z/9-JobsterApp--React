@@ -20,7 +20,7 @@ export const deleteJobThunk = async (jobId, thunkAPI) => {
     return resp.data.msg;
   } catch (error) {
     thunkAPI.dispatch(hideLoading());
-    return checkForUnauthorizedResponse(error, thunkAPI);
+    return checkForUnauthorizedResponse(message, thunkAPI);
   }
 };
 
@@ -30,6 +30,6 @@ export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
     thunkAPI.dispatch(clearValues());
     return resp.data;
   } catch (error) {
-    return checkForUnauthorizedResponse(error, thunkAPI);
+    return checkForUnauthorizedResponse(message, thunkAPI);
   }
 };
