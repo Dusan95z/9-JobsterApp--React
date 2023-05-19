@@ -26,7 +26,7 @@ export const updateUserThunk = async (url, user, thunkAPI) => {
     const resp = await customFetch.patch(url, user);
     return resp.data;
   } catch (error) {
-    return checkForUnauthorizedResponse(message, thunkAPI);
+    return checkForUnauthorizedResponse(error, thunkAPI);
   }
 };
 
